@@ -3,6 +3,11 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+st.title("Daniel Qian")
+
+with st.sidebar:
+    name = st.text_input("Search Input", key="search")
+    name
 """
 # Welcome to Streamlit!
 

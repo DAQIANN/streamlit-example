@@ -2,12 +2,8 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
+from test import print_something
 
-st.title("Daniel Qian")
-
-with st.sidebar:
-    name = st.text_input("Search Input", key="search")
-    name
 """
 # Welcome to Streamlit!
 
@@ -17,16 +13,16 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
+st.title("Daniel Qian")
+
+with st.sidebar:
+    name = st.text_input("Search Input", key="search")
+    name
 
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
+print_something()
 indices = np.linspace(0, 1, num_points)
 theta = 2 * np.pi * num_turns * indices
 radius = indices
